@@ -1,9 +1,9 @@
 var mysql=require("mysql")
 var con=mysql.createConnection({
     host:"localhost",
-    user:"root",
-    password:"",
-    database:"mobilehouse"
+    user:"8JsZgb4KH8",
+    password:" UQMAuGGDZS",
+    database:" UQMAuGGDZS"
 
 })
 con.connect((err)=>{
