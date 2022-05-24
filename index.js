@@ -16,7 +16,19 @@ app.get("/fake",function(req,res)
     //   res.json( [result] )
       
 //   }) 
-res.json({"dsd":"sdds"})
+res.json({"dsd":"dsds"})
+  
+})
+app.get("/first",function(req,res)
+ {
+    // searchqr=`SELECT name,image,mrp,price FROM headset`
+    // con.query(searchqr,(err,result,fields)=>{
+
+    //   if(err) throw(err);
+    //   res.json( [result] )
+      
+//   }) 
+res.json({"dsd":"HIiiiiiiiiiiiiiii"})
   
 })
 
