@@ -28,7 +28,20 @@ app.get("/first",function(req,res)
     //   res.json( [result] )
       
 //   }) 
-res.json({"dsd":"HIiiiiiiiiiiiiiii"})
+res.json({"dsd":"HIiiiiiiiiiiiiiii"})   
+  
+})
+
+app.get("/second",function(req,res)
+ {
+    searchqr=`SELECT * from user`
+    con.query(searchqr,(err,result,fields)=>{
+
+      if(err) throw(err);
+      res.json( result )
+      
+  }) 
+// res.json({"dsd":"HIiiiiiiiiiiiiiii"})   
   
 })
 

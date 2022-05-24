@@ -3,7 +3,7 @@ var con=mysql.createConnection({
     host:"localhost",
     user:"8JsZgb4KH8",
     password:" UQMAuGGDZS",
-    database:" UQMAuGGDZS"
+    database:" 8JsZgb4KH8"
 
 })
 con.connect((err)=>{
