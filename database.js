@@ -1,10 +1,11 @@
 var mysql=require("mysql")
 var con=mysql.createConnection({
-    host:"127.0.0.1",
-    user:"8JsZgb4KH8",
-    password:" UQMAuGGDZS",
-    database:" 8JsZgb4KH8",
-    dialect:"mysql"
+    host     : 'remotemysql.com',
+    user     : '8JsZgb4KH8',
+    password : 'pJCkYopx4u',
+    database : '8JsZgb4KH8'
+   
+
 
 })
 con.connect((err)=>{

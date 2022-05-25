@@ -6,7 +6,7 @@ app.use(upload())
 app.use(cors());
 
 
-
+const con=require('./database')
 app.get("/fake",function(req,res)
  {
     // searchqr=`SELECT name,image,mrp,price FROM headset`
