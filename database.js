@@ -2,7 +2,7 @@ var mysql=require("mysql")
 var con=mysql.createConnection({
     host     : 'remotemysql.com',
     user     : '8JsZgb4KH8',
-    password : 'pJCkYopx4u',
+    password : 'XF8jeAgL9E',
     database : '8JsZgb4KH8'
    
 
@@ -10,6 +10,6 @@ var con=mysql.createConnection({
 })
 con.connect((err)=>{
     if(err) throw err
-     console.log("database connected")
+     else console.log("database connected")
 })
 module.exports=con;
