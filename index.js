@@ -65,7 +65,7 @@ app.post("/imageAdd",parseUrlencoded,(req,res)=>{
     
     let file= req.files.image
                 
-     file && file.mv(`../products/images/${Math.round(new Date().getTime()/1000)}${file.name}`)
+    file && file.mv(`products/images/${Math.round(new Date().getTime()/1000)}${file.name}`)
     bannerimageAdd=`insert into image (productImage) values ( '${Math.round(new Date().getTime()/1000)}${file.name}')`
     con.query(bannerimageAdd,(err,result)=>{
         if(err) throw (err)
