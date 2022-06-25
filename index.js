@@ -10,7 +10,7 @@ var jsonParser=bodyParser.json();
 var parseUrlencoded = bodyParser.urlencoded({ extended: true });
 app.use(express.static('public')); 
 app.use('products/images', express.static('images')); 
-app.use('/static', express.static(path.join(__dirname, 'products')))
+app.use('/static', express.static(path.join(__dirname, 'public')))
 // app.use(express.static('public')); 
 
 const con=require('./database')
