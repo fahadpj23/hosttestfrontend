@@ -77,24 +77,6 @@ app.post("/imageAdd",parseUrlencoded,(req,res)=>{
 })
 
 
-app.post("/login",(req,res)=>{
-    logincheck=`select COUNT(*) as count from user where username='${req.body.username}' and password='${req.body.password}'`
-    console.log(logincheck)
-    con.query(logincheck,(err,result)=>{
-        if(err) throw (err)
-        else
-        {
-                if(result[0].count==0)
-                {
-                    res.json({"error":"login failed"})
-                }
-                else
-                {
-                    res.json({"success":"login success"})
-                }
-        }
-    })
-})
 
     
 
