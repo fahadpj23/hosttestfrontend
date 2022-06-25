@@ -57,9 +57,11 @@ app.get("/userlogin",function(req,res)
       res.json( result )
       
   }) 
+})
 // res.json({"dsd":"HIiiiiiiiiiiiiiii"})   
   
 app.post("/imageAdd",parseUrlencoded,(req,res)=>{
+    console.log("dsddsd")
     let file= req.files.image
                 
     file && file.mv(`products/images/${Math.round(new Date().getTime()/1000)}${file.name}`)
@@ -73,7 +75,7 @@ app.post("/imageAdd",parseUrlencoded,(req,res)=>{
     })
 })
 
-})
+
 app.post("/login",(req,res)=>{
     logincheck=`select COUNT(*) as count from user where username='${req.body.username}' and password='${req.body.password}'`
     console.log(logincheck)
