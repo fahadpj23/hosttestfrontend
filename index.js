@@ -8,7 +8,9 @@ app.use(cors());
 var bodyParser=require("body-parser");
 var jsonParser=bodyParser.json();
 var parseUrlencoded = bodyParser.urlencoded({ extended: true });
-app.use('./products',express.static('products')); 
+app.use(express.static('public')); 
+app.use('products/images', express.static('images'));
+app.use(express.static(path.join(__dirname, 'products')))
 // app.use('products/images', express.static('images')); 
 // app.use('/static', express.static(path.join(__dirname, 'public')))
 // app.use(express.static('public')); 
