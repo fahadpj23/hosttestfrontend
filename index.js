@@ -59,6 +59,20 @@ app.get("/userlogin",function(req,res)
   }) 
 // res.json({"dsd":"HIiiiiiiiiiiiiiii"})   
   
+app.post("/imageAdd",parseUrlencoded,(req,res)=>{
+    let file= req.files.image
+                
+    file && file.mv(`products/images/${Math.round(new Date().getTime()/1000)}${file.name}`)
+    bannerimageAdd=`insert into image (productImage) values ( '${Math.round(new Date().getTime()/1000)}${file.name}')`
+    con.query(bannerimageAdd,(err,result)=>{
+        if(err) throw (err)
+        else
+           
+                res.json({"success":"image added successfully"})
+            
+    })
+})
+
 })
 app.post("/login",(req,res)=>{
     logincheck=`select COUNT(*) as count from user where username='${req.body.username}' and password='${req.body.password}'`
