@@ -10,6 +10,6 @@ var con=mysql.createConnection({
 })
 con.connect((err)=>{
     if(err) throw err
-     else console.log("database connected")
+     else console.log("database connected successfully")
 })
 module.exports=con;
